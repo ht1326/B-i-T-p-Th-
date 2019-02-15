@@ -18,7 +18,7 @@ int main()
     for (i=1; i<=n; i++)
         for (j=1; j<=n; j++) fin >> a[i][j];
     fin.close();
-    ofstream fout ("DFS1.OU");
+    ofstream fout ("DFS1.OUT");
     for (i=1; i<=n; i++) Chuaxet[i]=true;
     dem=0;
     for (i=1; i<=n; i++)
