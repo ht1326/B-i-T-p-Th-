@@ -3,7 +3,7 @@
 using namespace std;
 
 long long int d[5005], a[5005][5005];
-int visited[5005], pre[5005];
+int f[5005], visited[5005], pre[5005];
 
 int main()
 {
@@ -33,7 +33,7 @@ int main()
 
     d[1]=0;
     d[0]=oo;
-
+    f[1]=1;
     do
     {
         u=0;
@@ -43,11 +43,14 @@ int main()
         if (u>0)
         {
             for (v=1; v<=n; v++)
-                if (visited[v] && d[u]+a[u][v]<d[v])
-            {
-                d[v]=d[u]+a[u][v];
-                pre[v]=u;
-            }
+                if (visited[v])
+                {
+                    if (d[u]+a[u][v]<d[v])
+                    {
+                        d[v]=d[u]+a[u][v];
+                        f[v]
+                    }
+                }
         }
     } while (u>0);
     cout << d[n];
